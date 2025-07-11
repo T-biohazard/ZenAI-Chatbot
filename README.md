@@ -12,14 +12,14 @@ git clone https://github.com/T-biohazard/zenai.git
   TAVILY_API_KEY=your_tavily_api_key_here
 
 3. Docker Deployment
-# Build and run with Docker Compose
+- Build and run with Docker Compose
 docker-compose up --build
 
-# Or can also run in detached mode
+- Or can also run in detached mode
 docker-compose up -d --build
 
 4. Local Development
-Open terminal and add these commands : 
+- Open terminal and add these commands : 
 pip install -r requirements.txt - install dependencies 
 
 python backend.py - for backend 
