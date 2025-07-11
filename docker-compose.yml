@@ -1,0 +1,37 @@
+version: '3.8'
+
+services:
+  backend:
+    build: .
+    command: python backend.py
+    ports:
+      - "8000:8000"
+    environment:
+      - GROQ_API_KEY=${GROQ_API_KEY}
+      - TAVILY_API_KEY=${TAVILY_API_KEY}
+    env_file:
+      - .env
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    networks:
+      - app-network
+
+  frontend:
+    build: .
+    command: python frontend.py
+    ports:
+      - "7860:7860"
+    environment:
+      - BACKEND_URL=http://backend:8000
+    depends_on:
+      backend:
+        condition: service_healthy
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
