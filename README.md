@@ -5,9 +5,11 @@ A Chatbot with LangChain, LangGraph, Groq LLM, and multiple tools like Arxiv, Wi
 1. Clone the Repository
 git clone https://github.com/T-biohazard/zenai.git
 2. Environment Setup
-- Create a .env file in the project root and add 2 keys : 
-GROQ_API_KEY=your_groq_api_key_here
-TAVILY_API_KEY=your_tavily_api_key_here
+- Create a .env file in the project root and add 2 keys :
+
+  GROQ_API_KEY=your_groq_api_key_here
+
+  TAVILY_API_KEY=your_tavily_api_key_here
 
 3. Docker Deployment
 # Build and run with Docker Compose
