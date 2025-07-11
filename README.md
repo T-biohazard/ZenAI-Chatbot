@@ -19,9 +19,8 @@ docker-compose up --build
 docker-compose up -d --build
 
 4. Local Development
-- Open terminal and add these commands : 
-pip install -r requirements.txt - install dependencies 
+ Open terminal and add these commands :
 
-python backend.py - for backend 
-
-python frontend.py - for frontend
+- pip install -r requirements.txt - install dependencies
+- python backend.py - for backend
+- python frontend.py - for frontend
